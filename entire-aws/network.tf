@@ -4,9 +4,10 @@ resource "aws_vpc" "entier_vpc" {
     Name = local.name
   }
 }
+
 resource "aws_subnet" "subnets" {
    count             = length(var.subnet_names)
-  vpc_id            = aws_vpc.ntier_vpc.id
+  vpc_id            = aws_vpc.entier_vpc.id
   cidr_block        = cidrsubnet(var.vpc_network_cidr, 8, count.index)
   availability_zone = var.subnet_azs[count.index]
   tags = {
