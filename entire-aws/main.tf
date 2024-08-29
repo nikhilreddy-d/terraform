@@ -6,7 +6,7 @@ resource "aws_vpc" "entier_vpc" {
   }
 
 resource "aws_subnet" "subnets" {
-  count      = var.subnet_count
+  count = length(var.subnet_cidr_ranges)
   vpc_id     = aws_vpc.entier_vpc.id
   cidr_block = var.subnet_cidr_ranges[count.index]
   tags = {

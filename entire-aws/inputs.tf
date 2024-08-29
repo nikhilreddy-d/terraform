@@ -16,8 +16,3 @@ variable "subnet_names" {
   description = "These are subnet names"
 
 }
-
-variable "subnet_count" {
-  type    = number
-  default = 6
-}
