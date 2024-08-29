@@ -1,10 +1,10 @@
 resource "aws_security_group" "websg" {
   name        = var.web_sg_config.name
   description = var.web_sg_config.description
-  vpc_id      = aws_vpc.ntier_vpc.id
+  vpc_id      = aws_vpc.entier_vpc.id
 
   depends_on = [
-    aws_vpc.ntier_vpc
+    aws_vpc.entier_vpc
   ]
 
 }
@@ -29,7 +29,7 @@ resource "aws_security_group" "dbsg" {
   vpc_id      = aws_vpc.ntier_vpc.id
 
   depends_on = [
-    aws_vpc.ntier_vpc
+    aws_vpc.entier_vpc
   ]
 
 }
@@ -51,10 +51,10 @@ resource "aws_security_group_rule" "dbsg_rules" {
 resource "aws_security_group" "appsg" {
   name        = var.app_sg_config.name
   description = var.app_sg_config.description
-  vpc_id      = aws_vpc.ntier_vpc.id
+  vpc_id      = aws_vpc.entier_vpc.id
 
   depends_on = [
-    aws_vpc.ntier_vpc
+    aws_vpc.entier_vpc
   ]
 
 }
