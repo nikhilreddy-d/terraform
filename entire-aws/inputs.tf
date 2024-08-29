@@ -3,11 +3,6 @@ variable "vpc_network_cidr" {
   default     = "10.10.0.0/16"
   description = "This is network cidr"
   }
-  
-variable "subnet_cidr_format" {
-  type    = string
-  default = "10.10.%g.0/24"
-}
 
 variable "subnet_names" {
   type        = list(string)
