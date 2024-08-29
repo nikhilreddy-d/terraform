@@ -91,3 +91,9 @@ variable "app_subnet_name" {
   default = "app1"
 
 }
+
+variable "app_script_version" {
+  type    = string
+  default = "0"
+
+}
