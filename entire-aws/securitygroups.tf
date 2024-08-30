@@ -26,7 +26,7 @@ resource "aws_security_group_rule" "websg_rules" {
 resource "aws_security_group" "dbsg" {
   name        = var.db_sg_config.name
   description = var.db_sg_config.description
-  vpc_id      = aws_vpc.ntier_vpc.id
+  vpc_id      = aws_vpc.entier_vpc.id
 
   depends_on = [
     aws_vpc.entier_vpc
